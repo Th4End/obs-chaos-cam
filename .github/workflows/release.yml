@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Construire le ZIP
+        run: |
+          mkdir -p "Chaos Cam"
+          cp chaos_cam.lua "Installer Chaos Cam.bat" README.md "Chaos Cam/"
+          zip -r "chaos-cam-${GITHUB_REF_NAME}.zip" "Chaos Cam"
+
+      - name: Publier la release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: chaos-cam-*.zip
+          generate_release_notes: true

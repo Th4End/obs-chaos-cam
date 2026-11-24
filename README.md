@@ -15,7 +15,7 @@ Après chaque effet, la webcam revient exactement à sa place.
 
 ### Méthode rapide (Windows)
 
-1. Télécharge le projet (bouton vert **Code → Download ZIP**) et dézippe-le.
+1. Télécharge le fichier `chaos-cam-vX.Y.Z.zip` de la [dernière version](https://github.com/Th4End/obs-chaos-cam/releases/latest) et dézippe-le.
 2. **Ferme OBS.**
 3. Double-clique sur **`Installer Chaos Cam.bat`**.
 4. Rouvre OBS : le script est déjà chargé.
